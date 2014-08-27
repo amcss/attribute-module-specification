@@ -2,17 +2,6 @@
 
 Attribute Modules (AM) is a technique for using *attributes* and their *values* rather than classes for styling HTML elements.
 
-The AM Spec consists of these parts:
-
-- Basic syntax
-	- The prefix
-	- Attributes
-	- Values
-- Concepts
-	- Traits
-	- Modules
-	- Variations
-
 ## Syntax
 ### The Prefix
 
@@ -22,7 +11,7 @@ All AM attributes must be prefixed in order to avoid clashing with in-built HTML
 
 The syntax for attributes follows a similar concept to BEM.
 
-```markup
+```html
 <tag am-traitName>
 <tag am-BlockName>
 <tag am-BlockName-ChildElement>
@@ -40,9 +29,9 @@ Attributes can be styled directly
 
 Values are space-separated, like classes, but have a wider range of permitted characters.
 
-```markup
-am-traitName="value two breakpoint:three"
-am-BlockName="modifier"
+```html
+<tag am-traitName="value two breakpoint:three">
+<tag am-BlockName="modifier">
 ```
 
 Attribute-value pairs are always styled using the space-separated attribute selector, `~=`
