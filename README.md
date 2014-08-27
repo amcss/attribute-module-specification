@@ -1,6 +1,6 @@
 # Attribute Modules for CSS - Specification
 
-Attribute Modules (AM) is a technique for using *attributes* and their *values* rather than classes for styling HTML elements.
+Attribute Modules (AM) is a technique for using **attributes** and their **values** rather than classes for styling HTML elements.
 
 ## Concepts
 
@@ -8,15 +8,15 @@ Like other CSS methodologies, AM makes some suggestions about logical groupings 
 
 ### Modules
 
-Modules are similar to both Blocks and Elements in BEM, and can initially be considered a direct replacement for HTML classes. Modules are described by HTML *attributes*.
+Modules are similar to both Blocks and Elements in BEM, and can initially be considered a direct replacement for HTML classes. Modules are described by HTML **attributes**.
 
 ### Variations
 
-Similar to the Modifier of BEM, Variations are represented by the *value* of the attribute, and extend or override the base Module's styles.
+Similar to the Modifier of BEM, Variations are represented by the **value** of the attribute, and extend or override the base Module's styles.
 
 ### Traits
 
-A collection of single-purpose *values*, grouped into a namespace by the *attribute*. For example, a collection of typographical styles might be grouped into a `type` trait. This is similar to SuitCSS' [utils](https://github.com/suitcss/utils) project.
+A collection of single-purpose **values**, grouped into a namespace by the **attribute**. For example, a collection of typographical styles might be grouped into a `type` trait. This is similar to SuitCSS' [utils](https://github.com/suitcss/utils) project.
 
 ## HTML Syntax
 ### The Prefix
@@ -24,7 +24,7 @@ A collection of single-purpose *values*, grouped into a namespace by the *attrib
 All AM attributes must be prefixed in order to avoid clashing with in-built HTML attributes. For the remainder of this document, the prefix `am-` will be used, but any short string would be appropriate. If the prefix begins with `data-`, all AM attributes will be valid HTML attributes. Here is an example of AM markup in HTML:
 
 ```html
-<tag am-traitName="one two breakpoint:three">
+<tag am-traitName="one two mobile:three">
 <tag am-BlockName>
 <tag am-BlockName-ChildElement>
 <tag am-BlockName="variant">
@@ -45,7 +45,7 @@ Attribute-value pairs are always styled using the space-separated attribute sele
 ```css
 [am-traitName~="value"] { /* styles */ }
 [am-traitName~="two"] { /* styles */ }
-[am-traitName~="three"] { /* styles */ }
+[am-traitName~="three"], .breakpoint-mobile [am-traitName~="breakpoint:three"] { /* styles */ }
 
 [am-BlockName] {
   /* Block Styles */
@@ -59,3 +59,4 @@ Attribute-value pairs are always styled using the space-separated attribute sele
 }
 ```
 
+Note the use of the base attribute selector for styling - these styles are shared by all tags that include the attribute. This is an ideal behaviour for Modules & Variations, as a Variation cannot exist without a base Module styles to be based on. In contrast, a Trait usually doesn't define any styles at the base attribute, but provides a series of individual styles that can be mixed and matched.
