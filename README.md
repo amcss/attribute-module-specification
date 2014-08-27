@@ -22,10 +22,10 @@ All AM attributes must be prefixed in order to avoid clashing with in-built HTML
 
 The syntax for attributes follows a similar concept to BEM.
 
-```
-am-traitName
-am-BlockName
-am-BlockName-ChildElement
+```markup
+<tag am-traitName>
+<tag am-BlockName>
+<tag am-BlockName-ChildElement>
 ```
 
 Attributes can be styled directly
@@ -40,14 +40,14 @@ Attributes can be styled directly
 
 Values are space-separated, like classes, but have a wider range of permitted characters.
 
-```
+```markup
 am-traitName="value two breakpoint:three"
 am-BlockName="modifier"
 ```
 
 Attribute-value pairs are always styled using the space-separated attribute selector, `~=`
 
-```
+```css
 [am-traitName~="value"] { /* styles */ }
 [am-traitName~="two"] { /* styles */ }
 [am-traitName~="three"] { /* styles */ }
