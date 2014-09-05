@@ -34,6 +34,8 @@ All AM attributes must be prefixed in order to avoid clashing with in-built HTML
 
 The syntax for attributes follows a similar concept to Suit & BEM, with lower-camel-case names for Traits and upper-camel-case (or Pascal case) for Modules, joined by a hyphen to represent parent-child relationships.
 
+Note: HTML attribute names are not case sensitive, so capitalisation is purely for readability of the HTML markup. 
+
 ### Values
 
 Values are space-separated, like classes, but have a wider range of permitted characters. This is one area where AM provides you extra flexibility, so feel free to experiment.
