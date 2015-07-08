@@ -47,7 +47,7 @@ Attribute-value pairs are always styled using the space-separated attribute sele
 ```css
 [am-traitName~="value"] { /* styles */ }
 [am-traitName~="two"] { /* styles */ }
-[am-traitName~="three"], .breakpoint-mobile [am-traitName~="breakpoint:three"] { /* styles */ }
+[am-traitName~="three"], .breakpoint-mobile [am-traitName~="mobile:three"] { /* styles */ }
 
 [am-BlockName] {
   /* Block Styles */
