@@ -1,5 +1,7 @@
 # Attribute Modules for CSS - Specification
 
+[![Join the chat at https://gitter.im/amcss/attribute-module-specification](https://badges.gitter.im/amcss/attribute-module-specification.svg)](https://gitter.im/amcss/attribute-module-specification?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Attribute Modules (AM) is a technique for using **attributes** and their **values** rather than classes for styling HTML elements.
 
 ## Concepts
